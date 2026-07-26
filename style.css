@@ -1,148 +1,213 @@
-.scene{
-  width: 340px;
-  height: 530px;
-  perspective: 1000px;
-  margin: 70px auto;
+html{
+  scroll-behavior: smooth;
 }
-
-#flip-toggle{
-  display: none;
-}
-
-.container{
-  width: 100%;
+body{
+  background: linear-gradient(to right, #FA709A, #FEE140);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   height: 100%;
+  
+}
+.logo{
+  width:50px;
+  height: 50px;
+  object-fit: cover;
   position: relative;
-  transform-style: preserve-3d;
-  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+}
+.schoolname{
+  gap: 10px;
+  color: #fff;
+  font-family: Arial, Sans-Serif;
+  display:flex;
+  position: fixed;
+  flex-direction: row;
+  float:left;
+  margin: 0px;
+  font-size: 15px;
+  line-height: 1px;
+  z-index: 1;
+  
+}
+.navbr{
+  margin-top: 20px;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  margin: auto;
+  
+}
+.container{
+  padding-top: -30px;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-items: center;
+  background-color: rgba(255, 255, 2555, 0.35);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgb(255, 255, 255);
+  border-left: 1px solid rgb(255, 255, 255);
+  border-radius: 20px;
+  height: max-content;
+  width: max-content;
+  margin: auto;
+  margin-top:;
+  animation: slidedwn;
+  animation-duration: 1s;
+  z-index: 1;
 }
 
-.card-face{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden; 
-  -webkit-backface-visibility: hidden;
-  padding: 30px;
-  border: 1px solid rgba(0, 0, 0, 0.5);
-  box-sizing: border-box;
-  border-radius: 20px;
-  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 1);
+@keyframes slidedwn{
+  from{transform: translateY(-150%);}
+}
+
+.handler{
+  display: flex;
+  list-style-type: none;
+  gap: 15px;
+  padding-right: 25px;
+  padding-bottom: px;
+  
+}
+ul li a{
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  padding: 10px;
+  background-color: ;
+  transition: 0.15s;
+  font-family: Sans-Serif;
+  font-weight: bold;
+}
+
+ul li a:hover{
+  color: white;
+  width: 100px;
+  font-size: 17px;
+  scale: 1.5;
+  background-color: black;
+  border-radius: 15px;
+  text-decoration: underline;
+}
+
+.loginbtn{
+  float: right;
+  display: flex;
+  margin-right: 10px;
+}
+
+.login{
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  padding: 10px 20px 10px 20px;
+  margin: 0px;
+  padding: -10px;
+  border-radius: 10px;
+  transition-property: transfrom;
+  transition-duration: 1s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+.login:hover{
+  opacity: 0.8;
+  scale: 1.2;
+  transform: rotateX(360deg);
+}
+
+.image1{
+  width: 280px;
+  height: 400px;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  border-radius: 30px;
+}
+#hmpage{
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.card-font{
-  transform: rotateY(0deg);
-  z-index: 2;
-}
-
-.card-back {
-  transform: rotateY(180deg);
-  display: flex;
-}
-
-#flip-toggle:checked ~ .container {
-  transform: rotateY(180deg);
-}
-
-card-face h2 {
+  align-items: center;
+  margin: 0px;
+  margin-top: 200px;
+  font-size: 25px;
   text-align: center;
-  margin-bottom: 20px;
-  color: #000;
+  line-height: 10px;
 }
 
-.card-face input {
-  display: block;
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  border-radius: 20px;
-  border: 1px solid #fff;
+.university{
+  font-family: chango;
+  font-size:45px;
+}
+
+#About{
+  scroll-margin-top: 200px;
   background: rgba(255, 255, 255, 0.5);
-  box-sizing: border-box;
-}
-
-.card-face button {
-  width: 100%;
-  padding: 12px;
-  margin-top: 15px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgb(255, 255, 255);
+  border-left: 1px solid rgb(255, 255, 255);
   border-radius: 20px;
-  border: none;
-  background: #333;
-  color: #fff;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-/* Make links look clean and interactive */
-.links {
-  margin-top: 20px;
-  text-align: center;
-}
-
-.flip-link {
-  color: #0056b3;
-  cursor: pointer;
-  text-decoration: underline;
-  font-size: 14px;
-}
-
-
-.heading{
-  position: block;
-  text-align: center;
-  align-items: center;
-  align-content: center;
-  margin-top: -40px;
-  margin-bottom: 10px;
-  font-weight: bold;
-  font-size: 20px;
+  padding: 20px;
   display: flex;
-  flex-direction: column;
-  gap: -10px;
-  line-height: 1px;
-}
-
-.btn{
-  margin-top: 50px;
-  animation-delay: 0;
-  animation: 0.15s;
-  animation-timing-function: ease;
-}
-.heading h2{
-  margin-bottom: 20px;
-}
-
-.link{
-  text-align: center;
-  margin-top: 20px;
-  
-
-}
-.heading2{
-  position: block;
-  text-align: center;
+  flex-direction: row;
   align-items: center;
-  align-content: center;
-  margin-top: -40px;
-  margin-bottom: 10px;
-  font-weight: bold;
-  font-size: 20px;
+  margin: auto;
+  margin-top: 400px;
+  margin-bottom: 600px;
+  margin-left: 200px;
+  margin-right: 200px;
+  gap: 50px;
+  width: 200px;
+  animation: 1s;
+  animation-delay: 0s;
+  transition: width 0.4s ease; 
+  overflow: hidden;
+ z-index: -1;
+}
+
+#About:hover{
+  width: 800px;
   display: flex;
-  flex-direction: column;
-  gap: -10px;
-  line-height: 1px;
+  overflow: default;
+}
+#About img{
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px;
+  animation: 1s;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+  transition: scale 0.4s ease; 
+}
+#About img:hover{
+  scale:1.3;
+  transform: rotateX(360deg);
 }
 
-.heading2 h2{
-  margin-bottom: 20px;
+#About p{
+  font-family: chango;
+  color: black;
+  text-align: justify;
+  position: fixed;
+  line-height: 30px;
+  font-size: 17px;
+  margin-left: 250px; 
+  margin-right: 50px;
+  width: 200;
 }
 
-.btn:hover{
-  scale: 1;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  transform: translateY(-7px);
-}
+
+
+
+
+
+
+
+
+
